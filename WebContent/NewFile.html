@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+</head>
+<body>
+<button class="goodBtn" id="p01" >dd</button>
+
+<button class="goodBtn" id="p02" >dd</button>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+    console.log( "ready!" );
+    $(".goodBtn").click(function(){
+    	alert("hello");
+    	var id = $(this).attr('id')
+    	var rat = $(this).attr('class');
+    	alert(id);
+    	alert(rat);
+    	
+    	
+    });
+});
+</script>
+</body>
+</html>

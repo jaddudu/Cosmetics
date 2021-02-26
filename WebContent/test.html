@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #colorContainer {
+            display: flex;
+            width: 800px;
+        }
+
+        .dv1 {
+            background-color: yellow;
+            height: 5rem;
+        }
+
+        .dv2 {
+            background-color: red;
+            height: 5rem;
+
+        }
+
+        .dv3 {
+            background-color: green;
+            height: 5rem;
+
+        }
+    </style>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+   
+    
+     <div id="colorContainer">
+        <div class="dv1" > </div>
+        <div class="dv2" style="text-align: center;"> </div>
+        <div class="dv3" style="text-align: center;"> </div>
+    </div>
+
+    <script>
+        var my = prompt("나의 데이터");
+        var harm = prompt("유해 데이터");
+        var rest = prompt("남은 데이터");
+
+        var my = parseInt(my);
+        var harm = parseInt(harm);
+        var rest = parseInt(rest);
+
+        console.log(my,harm,rest);
+        var total = my + harm + rest;
+
+        var dv1Width = parseInt(800 * (my / total));
+        var dv2Width = parseInt(800 * (harm / total));
+        var dv3Width = parseInt(800 * (rest / total));
+
+        console.log(dv1Width,dv2Width,dv3Width);
+
+        // var dv1 = document.getElementsByClassName('dv1');
+        // var dv2 = document.getElementsByClassName('dv2');
+        // var dv3 = document.getElementsByClassName('dv3');
+        // dv1Width = dv1.width;
+        // dv2Width = dv2.width;
+        // dv3Width = dv3.width;
+
+        
+ 
+
+
+       $('.dv1').css("width", 800*(my/total));
+       $('.dv2').css("width", 800*(harm/total));
+       $('.dv3').css("width", 800*(rest/total));
+        //$('#colorContainer').append("<div style='width :"+dv1Width+"'></div><div style='width :"+dv2Width+"'></div><div style='width :"+dv3Width+"'></div>")
+
+
+        
+    </script>
+</body>
+
+</html>

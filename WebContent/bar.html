@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="bar1.js"></script>
+        
+        <style>
+            div  {
+                margin : 150px 10px;
+    border : 1px solid black;
+    padding : 3px;
+    font-size : 0;
+}
+span {
+    display : inline-block;
+    color : #FFF;
+    font-size : 20px;
+    line-height : 1.8em;
+    text-align : center;
+}
+.blue{
+    background : #00F;
+}
+.red{
+    background :  #F00;
+    float : center;
+}
+.yellow{
+    background :  yellowgreen;
+    float : center;
+}
+    </style>
+</head>
+
+
+<body>
+
+    <div style="width:800px">
+        <span class="blue" data-val= "50%">찬성</span>
+        <span class="red" data-val= "35%">반대</span>
+        <span class="yellow" data-val="15%">기타</span>
+    </div>
+    <script>
+        d3.selectAll('span')
+  .datum(function(){return this.dataset})
+  .style('width', '20%')
+  .transition().duration(2000)
+  .style('width', d=>d.val)
+    </script>
+    
+</body>
+</html>
