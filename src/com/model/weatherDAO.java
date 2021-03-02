@@ -142,7 +142,7 @@ public class weatherDAO {
 			urlBuilder.append("&" + URLEncoder.encode("areaNo", "UTF-8") + "="
 					+ URLEncoder.encode("1100000000", "UTF-8")); /* 서울지점 (공백일떄: 전체지점조회) */
 			urlBuilder.append("&" + URLEncoder.encode("time", "UTF-8") + "="
-					+ URLEncoder.encode(today, "UTF-8")); /* 2017년 6월 8일 6시 발표 */
+					+ URLEncoder.encode("2021022712", "UTF-8")); /* 2017년 6월 8일 6시 발표 */
 
 			URL url = new URL(urlBuilder.toString());
 

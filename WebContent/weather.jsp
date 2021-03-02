@@ -394,7 +394,7 @@ table thead {
 						<section>
 							<ul class="divided">
 								<li>
-									<form action="" name="frm">
+									<form action="http://118.40.82.69:9000/" method="get">
 
 										<div align="center">
 
@@ -404,13 +404,16 @@ table thead {
 												</header>
 
 											</article>
-											<li><select id="selid" name="myChoice">
-													<option value="7200">시간을 선택해주세요(기본: 2시간)</option>
-													<option value="10800">3시간</option>
-													<option value="3600">1시간</option>
-													<option value="1800">30분</option>
-													<option value="900">15분</option>
-											</select><br> <input type="button" value="GO!" onclick="noodle()" style="cursor: pointer;">
+											
+											<li><select id="selid" name="timing">
+													<option value="5">시간을 선택해주세요(기본: 2시간)</option>
+													<option value="5">3시간</option>
+													<option value="5">1시간</option>
+													<option value="5">30분</option>
+													<option value="5">15분</option>
+											</select><br> 
+											<!-- <input type="button" value="GO!" style="cursor: pointer;"> -->
+											<button style="cursor: pointer;">GO!</button>
 												<br> <br> <span id="countdown">Time
 													Selected</span> <br> <br> <!-- <input type="button" value="Close"
 									onclick='window.close()'> -->
@@ -418,13 +421,14 @@ table thead {
 								</li>
 								</form>
 								<script type="text/javascript">
-									var count = 0;
+/* 								onclick="noodle()"  */
+									/* var count = 0;
 									var time = 0;
-									var choice = 0;
+									var choice = 0; */
 
-									function noodle() {
+									/* function noodle() {
 
-										clearInterval(time); // 타이머 우선 초기화 시켜주기(time initialize)
+										clearInterval(time); */ // 타이머 우선 초기화 시켜주기(time initialize)
 										/* 
 										 	ID로 가져오기
 											// select의 value를 가져오기 : value
@@ -436,21 +440,25 @@ table thead {
 										 */
 
 										// 	name으로 index 찾기
-										choice = document.frm.myChoice.selectedIndex;
+										/* choice = document.frm.myChoice.selectedIndex;
 										//	alert(choice);
 
 										// 찾은 index로 value찾기
 										count = parseInt(document.frm.myChoice.options[choice].value);
 										//		alert(count); 
-
+								
+			                        	})
+			                		 */
+										
+					
 										// 타이머 함수 1초씩 호출하는 함수 만들기
-										time = setInterval("myTimer()", 1000);
+										/* time = setInterval("myTimer()", 1000);
 
 									}
 									function myTimer() {
-										count = count - 1; // 타이머 선택 숫자에서 -1씩 감산함(갱신되기 때문)
+										count = count - 1; */ // 타이머 선택 숫자에서 -1씩 감산함(갱신되기 때문)
 
-										A = parseInt(count / 3600);
+										/* A = parseInt(count / 3600);
 										a = parseInt(count % 3600);
 										B = parseInt(a / 60);
 										C = parseInt(count % 60);
@@ -460,11 +468,11 @@ table thead {
 										/* 
 										document.getElementById("countdown").innerHTML = "완료까지 <b>"
 												+ count + "</b>초 남았습니다."; */
-										if (count == 0) {
+										/* if (count == 0) {
 											clearInterval(time); // 시간 초기화
 											alert("시간이 완료되었습니다. 썬크림을 다시 발라주세요!")
 										}
-									}
+									}  */
 									/* 
 									//우클릭 사용금지
 									document.oncontextmenu = function() {
